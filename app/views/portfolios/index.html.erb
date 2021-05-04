@@ -4,5 +4,5 @@
   <p><%= item.title%></p>
   <p><%= item.subtitle%></p>
   <p><%= item.body%></p>
-  <%= image_tag item.thumb_image%>
+  <%= image_tag item.thumb_image if item.thumb_image.present?%>
 <%end%>
