@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do |i|
+  Blog.create!(
+    title: "My Blog POst #{i}",
+    body: "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+  )
+end
+
+puts "10 blog posts created"
+
+5.times do |i| 
+  Skill.create!(
+    title: "Rails #{i}",
+    percent_utilized: 15,
+  )
+end
+
+puts "5 skills created"
+
+9.times do |i|
+  Portfolio.create!(
+    title: "Portfolio title #{i}",
+    subtitle: "My great service",
+    body: "Maecenas dui diam, tempor at velit sed, pulvinar lacinia nisl. Praesent iaculis arcu id eros ultrices lobortis. Cras sit amet justo blandit, maximus ipsum eu, lobortis mauris. Sed sit amet massa augue. Nulla sed dolor neque. Duis metus urna, scelerisque at pulvinar at, tristique in quam. Etiam vel ultrices justo.",
+    main_image: "https://via.placeholder.com/600x400",
+    thumb_image: "https://via.placeholder.com/350x200"
+  )
+end
+
+puts "9 portfolio items created"
