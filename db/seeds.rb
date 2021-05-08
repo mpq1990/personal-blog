@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 3.times do |i|
   Topic.create!(
     title: "Topic #{i}"
   )
 end
 
-puts "3 topics created"
+puts '3 topics created'
 
 10.times do |i|
   Blog.create!(
@@ -14,41 +16,39 @@ puts "3 topics created"
   )
 end
 
-puts "10 blog posts created"
+puts '10 blog posts created'
 
-5.times do |i| 
+5.times do |i|
   Skill.create!(
     title: "Rails #{i}",
-    percent_utilized: 15,
+    percent_utilized: 15
   )
 end
 
-puts "5 skills created"
+puts '5 skills created'
 
 8.times do |i|
   Portfolio.create!(
     title: "Portfolio title #{i}",
-    subtitle: "Ruby on Rails",
-    body: "Maecenas dui diam, tempor at velit sed, pulvinar lacinia nisl. Praesent iaculis arcu id eros ultrices lobortis. Cras sit amet justo blandit, maximus ipsum eu, lobortis mauris. Sed sit amet massa augue. Nulla sed dolor neque. Duis metus urna, scelerisque at pulvinar at, tristique in quam. Etiam vel ultrices justo.",
-    main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200"
+    subtitle: 'Ruby on Rails',
+    body: 'Maecenas dui diam, tempor at velit sed, pulvinar lacinia nisl. Praesent iaculis arcu id eros ultrices lobortis. Cras sit amet justo blandit, maximus ipsum eu, lobortis mauris. Sed sit amet massa augue. Nulla sed dolor neque. Duis metus urna, scelerisque at pulvinar at, tristique in quam. Etiam vel ultrices justo.',
+    main_image: 'https://via.placeholder.com/600x400',
+    thumb_image: 'https://via.placeholder.com/350x200'
   )
 end
 
-1.times do |i|
-  Portfolio.create!(
-    title: "Portfolio title #{i}",
-    subtitle: "React",
-    body: "Maecenas dui diam, tempor at velit sed, pulvinar lacinia nisl. Praesent iaculis arcu id eros ultrices lobortis. Cras sit amet justo blandit, maximus ipsum eu, lobortis mauris. Sed sit amet massa augue. Nulla sed dolor neque. Duis metus urna, scelerisque at pulvinar at, tristique in quam. Etiam vel ultrices justo.",
-    main_image: "https://via.placeholder.com/600x400",
-    thumb_image: "https://via.placeholder.com/350x200"
-  )
-end
+Portfolio.create!(
+  title: 'Portfolio title 1',
+  subtitle: 'React',
+  body: 'Maecenas dui diam, tempor at velit sed, pulvinar lacinia nisl. Praesent iaculis arcu id eros ultrices lobortis. Cras sit amet justo blandit, maximus ipsum eu, lobortis mauris. Sed sit amet massa augue. Nulla sed dolor neque. Duis metus urna, scelerisque at pulvinar at, tristique in quam. Etiam vel ultrices justo.',
+  main_image: 'https://via.placeholder.com/600x400',
+  thumb_image: 'https://via.placeholder.com/350x200'
+)
 
-puts "9 portfolio items created"
+puts '9 portfolio items created'
 
-3.times do |i| 
+3.times do |i|
   Portfolio.last.technologies.create!(name: "Technology #{i}")
 end
 
-puts "3 technologies created"
+puts '3 technologies created'

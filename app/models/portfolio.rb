@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 class Portfolio < ApplicationRecord
   has_many :technologies
 
-  accepts_nested_attributes_for :technologies, 
-                                reject_if: lambda { |attrs| attrs["name"].blank? }
+  accepts_nested_attributes_for :technologies,
+                                reject_if: ->(attrs) { attrs['name'].blank? }
 
   include Placeholder
 
-  validates_presence_of :title, :body, :main_image, :thumb_image
+  validates :title, :body, :main_image, :thumb_image, presence: true
 
   # Also a scope
   def self.react
-    where(subtitle: "React")
+    where(subtitle: 'React')
   end
 
-  scope :ruby_on_rails, -> { where(subtitle: "Ruby on Rails") }
+  scope :ruby_on_rails, -> { where(subtitle: 'Ruby on Rails') }
 
   after_initialize :set_defaults
 
@@ -22,7 +24,6 @@ class Portfolio < ApplicationRecord
     self.thumb_image ||= Placeholder.image_generator(height: 350, width: 200)
   end
 end
-
 
 #######
 # x ||= y is just like

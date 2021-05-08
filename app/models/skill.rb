@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Skill < ApplicationRecord
   include Placeholder
-  
-  validates_presence_of :title, :percent_utilized
+
+  validates :title, :percent_utilized, presence: true
 
   after_initialize :set_defaults
 
