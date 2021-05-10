@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: %i[edit update show destroy]
   layout 'portfolio'
   def index
     @portfolio_items = Portfolio.all
@@ -42,8 +42,7 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def destroy
     @portfolio_item.destroy

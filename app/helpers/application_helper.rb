@@ -17,4 +17,8 @@ module ApplicationHelper
       tag.p(greeting, class: 'source-greeting')
     end
   end
+
+  def copyright_generator
+    MpqViewTool::Renderer.copyright 'Majid', 'All rights reserved'
+  end
 end
