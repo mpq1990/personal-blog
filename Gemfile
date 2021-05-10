@@ -65,4 +65,4 @@ gem 'rubocop-rails', require: false
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem "mpq_view_tool", git: "https://github.com/mpq1990/mpq_view_tool"
+gem 'mpq_view_tool', '~> 0.1.0'
