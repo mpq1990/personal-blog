@@ -1,14 +1,14 @@
 <div class="col-md-4">
-  <div class="card mb-4 box-shadow">
+  <div class="card mb-4 box-shadow" data-id="<%= portfolio_item.id %>">
     <%= image_tag portfolio_item.thumb_image, class: "card-img-top" if portfolio_item.thumb_image.present?%>
     <div class="card-body">
       <p class="card-text"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %> <%= portfolio_item.subtitle%> </p>
       <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
+        <%# <div class="btn-group">
           <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
           <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-        </div>
-        <small class="text-muted">9 mins</small>
+        </div> %>
+        <%# <small class="text-muted">9 mins</small> %>
       </div>
     </div>
   </div>

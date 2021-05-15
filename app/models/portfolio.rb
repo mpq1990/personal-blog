@@ -15,6 +15,8 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'React')
   end
 
+  scope :by_position, -> { order("position ASC") }
+
   scope :ruby_on_rails, -> { where(subtitle: 'Ruby on Rails') }
 
   after_initialize :set_defaults
