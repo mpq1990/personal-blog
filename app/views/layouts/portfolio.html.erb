@@ -16,7 +16,7 @@
 
     <main role="main">
       <%= render "shared/portfolio_nav", location: 'top' %>
-      <%= render 'shared/portfolio_masthead' %>
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)%>
     </main>
 
     <%= yield %>
