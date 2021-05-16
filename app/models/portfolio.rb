@@ -10,6 +10,9 @@ class Portfolio < ApplicationRecord
 
   validates :title, :body, :main_image, :thumb_image, presence: true
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   # Also a scope
   def self.react
     where(subtitle: 'React')
