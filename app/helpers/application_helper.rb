@@ -26,29 +26,29 @@ module ApplicationHelper
     [
       {
         url: root_path,
-        title: "Home"
+        title: 'Home'
       },
       {
         url: about_me_path,
-        title: "About Me"
+        title: 'About Me'
       },
       {
         url: contact_path,
-        title: "Contact"
+        title: 'Contact'
       },
       {
         url: blogs_path,
-        title: "Blogs"
+        title: 'Blogs'
       },
       {
         url: portfolios_path,
-        title: "Portfolio"
+        title: 'Portfolio'
       }
     ]
   end
 
-  def nav_helper style, tag_type
-    nav_links = +""
+  def nav_helper(style, tag_type)
+    nav_links = +''
     nav_items.each do |item|
       nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
@@ -57,6 +57,6 @@ module ApplicationHelper
   end
 end
 
-def active? path
-  "active" if current_page? path
+def active?(path)
+  'active' if current_page? path
 end
