@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
   end
 
   def sort
-    params[:order].each do |key, value|
+    params[:order].each do |_key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
 
