@@ -30,7 +30,6 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new(portfolio_params)
 
     respond_to do |format|
-      debugger
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
       else
