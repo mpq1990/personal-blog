@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
   end
 
   def sort
-    params[:order].each do |key, value|
+    params[:order].each do |_key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
     end
 
@@ -37,8 +37,7 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     respond_to do |format|
@@ -63,7 +62,7 @@ class PortfoliosController < ApplicationController
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image,
-                                      technologies_attributes: [:id, :name, :_destroy])
+                                      technologies_attributes: %i[id name _destroy])
   end
 
   def set_portfolio_item

@@ -12,7 +12,7 @@ class PortfolioUploader < CarrierWave::Uploader::Base
   # if Rails.env.development? || Rails.env.test?
   #   storage :file
   # end
-  
+
   # # Use AWS storage if in production
   # if Rails.env.production?
   #   storage :aws
