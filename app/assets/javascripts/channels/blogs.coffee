@@ -1,5 +1,5 @@
 jQuery(document).on "turbolinks:load", ->
-  comment = $("#comments")
+  comments = $("#comments")
   if comments.length > 0
     App.global_chat = App.cable.subscriptions.create {
       channel: "BlogChannel"
