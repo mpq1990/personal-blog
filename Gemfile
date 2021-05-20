@@ -102,3 +102,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 # https://github.com/RobinBrouwer/gritter
 gem 'gritter', '~> 1.2'
+
+# https://github.com/redis/redis-rb/
+gem 'redis', '~> 3.3', '>= 3.3.1'
