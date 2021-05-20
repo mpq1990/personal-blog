@@ -18,6 +18,7 @@
 //= require jquery-ui
 //= require cocoon
 //= require gritter
+//= require cable
 //= require_tree .
 //= require popper
 //= require bootstrap-sprockets
