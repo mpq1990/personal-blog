@@ -2,11 +2,16 @@
   <div class="card">
     <div class="card-block">
       <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-2">
+          <%= gravitar_helper comment.user %>
         </div>
-
-        <div class="col-md-11">
-          <%= comment.content %>
+        <div class="col-md-10">
+          <div>
+              <%= comment.content %>
+          </div>
+          <div class="comment-attribution">
+            Comment Posted By <span class="comment-name"><%= comment.user.name %></span> <%= distance_of_time_in_words comment.created_at, Time.now %>
+          </div>
         </div>
       </div>
     </div>
