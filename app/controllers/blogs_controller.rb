@@ -7,11 +7,11 @@ class BlogsController < ApplicationController
 
   # GET /blogs or /blogs.json
   def index
-    if logged_in?(:site_admin)
-      @blogs = Blog.recent.page(params[:page]).per(5)
-    else
-      @blogs = Blog.published.recent.page(params[:page]).per(5)
-    end
+    @blogs = if logged_in?(:site_admin)
+               Blog.recent.page(params[:page]).per(5)
+             else
+               Blog.published.recent.page(params[:page]).per(5)
+             end
     @page_title = 'My Portfolio Blog'
   end
 
@@ -24,13 +24,14 @@ class BlogsController < ApplicationController
       @page_title = @blog.title
       @seo_keywords = @blog.body
     else
-      redirect_to blogs_path, notice: "You are not authorized"
+      redirect_to blogs_path, notice: 'You are not authorized'
     end
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+    @blog.topic = Topic.last
   end
 
   # GET /blogs/1/edit
@@ -87,6 +88,6 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id)
   end
 end

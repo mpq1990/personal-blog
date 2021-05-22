@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
-  validates :title, :body, presence: true
+  validates :title, :body, :topic_id, presence: true
 
   belongs_to :topic, optional: true
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module BlogsHelper
-  def gravitar_helper user
+  def gravitar_helper(user)
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end
 end
