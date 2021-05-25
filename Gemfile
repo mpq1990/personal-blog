@@ -105,3 +105,9 @@ gem 'gritter', '~> 1.2'
 
 # https://github.com/redis/redis-rb/
 gem 'redis', '~> 3.3', '>= 3.3.1'
+
+# https://github.com/vmg/redcarpet
+gem 'redcarpet', '~>3.4'
+
+# https://github.com/rubychan/coderay
+gem 'coderay', '~>1.1', '>=1.1.1'
