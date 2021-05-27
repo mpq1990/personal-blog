@@ -12,8 +12,18 @@
   }
 }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: font-url('PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: font-url('Quicksand-VariableFont_wght.ttf');
+}
+
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Quicksand';
   color: #555;
 }
 
@@ -29,9 +39,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+  font-family: 'Press Start 2P';
 }
 
 /*

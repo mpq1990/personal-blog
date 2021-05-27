@@ -1,6 +1,16 @@
 @import 'bootstrap';
 @import 'gritter';
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: font-url('PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: font-url('Quicksand-VariableFont_wght.ttf');
+}
+
 /*
  * Globals
  */
@@ -29,11 +39,27 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Quicksand';
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Press Start 2P';
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
