@@ -2,13 +2,13 @@
 @import 'gritter';
 
 @font-face {
-  font-family: 'Press Start 2P';
-  src: font-url('PressStart2P-Regular.ttf');
+  font-family: 'Squada One';
+  src: font-url('SquadaOne-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: font-url('Quicksand-VariableFont_wght.ttf');
+  font-family: 'Lato';
+  src: font-url('Lato-Regular.ttf');
 }
 
 /*
@@ -39,7 +39,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Quicksand';
+  font-family: 'Lato', sans-serif;
 }
 body {
   color: #fff;
@@ -59,7 +59,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Press Start 2P';
+  font-family: 'Squada One', cursive;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
