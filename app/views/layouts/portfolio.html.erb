@@ -6,8 +6,9 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
+    <%= favicon_link_tag "favicons/favicon.ico" %>
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -24,7 +25,6 @@
     <!-- start of footer -->
     <%= render 'shared/portfolio_footer.html' %>
     <!-- end of footer -->
-
-    <%= source_helper("application") %>
+    <%= alerts %>
   </body>
 </html>

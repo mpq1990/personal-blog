@@ -2,6 +2,20 @@
 @import 'jquery-ui';
 @import 'gritter';
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: font-url('PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: font-url('Quicksand-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: 'Quicksand';
+}
+
 :root {
   --jumbotron-padding-y: 3rem;
 }
@@ -47,6 +61,21 @@ footer p {
 /*
 * custom styles
 */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Press Start 2P';
+}
 
 .portfolio-container {
   padding-top: 30px;

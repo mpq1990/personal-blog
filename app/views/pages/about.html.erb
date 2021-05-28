@@ -1,13 +1,72 @@
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "profile.jpeg", width: 250, alt: "Profile Image" %>
-  </div>
-  <div class="col-md-8">
-    <div class="inner cover">
-      <h1 class="cover-heading">Majid Qureshi</h1>
-      <p class="lead">Software Architect | Engineering Manager | Software Engineer</p>
-      <p class="lead">NodeJs (Javascript, Typescript) | Ruby on Rails | C++ | ReactJs</p>
-      <p class="lead">Kubernetes | Jenkins | AWS</p>
+<div class="app-card-container">
+  <div class="card">
+    <h1>Majid Qureshi</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.jpeg", width: 250, alt: "Profile Image", class: "profile-img" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+          <div class="skills">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning"
+                role="progressbar" area-valuenow="<% skill.percent_utilized %>"
+                area-valuemax="100"
+                style="width: <%= skill.percent_utilized %>%"
+                >
+                </div>
+              </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="inner cover">
+          <p class="lead">Software Architect | Engineering Manager | Software Engineer</p>
+          <p class="lead">NodeJs (Javascript, Typescript) | Ruby on Rails | C++ | ReactJs</p>
+          <p class="lead">Kubernetes | Jenkins | AWS</p>
+          <p>
+            <button 
+              class="btn btn-primary" 
+              type="button"
+              data-toggle="collapse"
+              data-target="#jobHistory"
+              aria-expanded="false"
+              aria-controler="jobHistory">  
+              Job History
+            </button>
+
+            <button 
+              class="btn btn-primary" 
+              type="button"
+              data-toggle="collapse"
+              data-target="#educationHistory"
+              aria-expanded="false"
+              aria-controler="educationHistory">  
+              Eduction
+            </button>
+          </p>
+          <p>
+            <div class="collapse" id="jobHistory">
+              <div class="card card-block">
+                Job 1
+              </div>
+              <div class="card card-block">
+                Job 2
+              </div>
+            </div>
+
+            <div class="collapse" id="educationHistory">
+              <div class="card card-block">
+                Education 1
+              </div>
+              <div class="card card-block">
+                Education 2
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>  
     </div>
-  </div>  
+  </div>
 </div>

@@ -12,8 +12,18 @@
   }
 }
 
+@font-face {
+  font-family: 'Press Start 2P';
+  src: font-url('PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: font-url('Quicksand-VariableFont_wght.ttf');
+}
+
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Quicksand';
   color: #555;
 }
 
@@ -29,9 +39,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+  font-family: 'Press Start 2P';
 }
 
 /*
@@ -187,4 +195,17 @@ h6,
 
 .comment-name {
   font-weight: 700;
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog-sidebar-source {
+  margin-top: 20px;
 }
