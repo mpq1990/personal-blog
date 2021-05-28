@@ -1,24 +1,9 @@
 <div class="app-card-container">
   <div class="card">
-    <h1>Majid Qureshi</h1>
+    <h5>Majid Qureshi</h5>
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "profile.jpg", width: 250, alt: "Profile Image", class: "profile-img" %>
-        <div class="skills">
-          <% @skills.each do |skill| %>
-          <div class="skills">
-              <h4><%= skill.title %></h4>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-warning"
-                role="progressbar" area-valuenow="<% skill.percent_utilized %>"
-                area-valuemax="100"
-                style="width: <%= skill.percent_utilized %>%"
-                >
-                </div>
-              </div>
-          </div>
-          <% end %>
-        </div>
       </div>
       <div class="col-md-8">
         <div class="inner cover">
@@ -45,6 +30,33 @@
               aria-controler="educationHistory">  
               Eduction
             </button>
+
+            <button 
+              class="btn btn-primary" 
+              type="button"
+              data-toggle="collapse"
+              data-target="#skills"
+              aria-expanded="false"
+              aria-controler="skills">  
+              Skills
+            </button>
+          </p>
+          <p>
+            <div class="collapse skills" id="skills">
+              <% @skills.each do |skill| %>
+              <div class="skills">
+                <h6><%= skill.title %></h6>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-warning"
+                    role="progressbar" area-valuenow="<% skill.percent_utilized %>"
+                    area-valuemax="100"
+                    style="width: <%= skill.percent_utilized %>%"
+                  >
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
           </p>
           <p>
             <div class="collapse" id="jobHistory">
