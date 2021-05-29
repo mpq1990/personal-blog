@@ -10,6 +10,10 @@
     </span>
   </nav>
 
+  <p> <%= markdown @blog.summary if @blog.summary.present? %></p>
+
+  <hr>
+
   <p> <%= markdown @blog.body %></p>
 
   <%= render 'comments/comment_form' %>

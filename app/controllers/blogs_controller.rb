@@ -89,7 +89,7 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body, :topic_id, :status)
+    params.require(:blog).permit(:title, :body, :topic_id, :status, :summary)
   end
 
   def set_sidebar_topics
