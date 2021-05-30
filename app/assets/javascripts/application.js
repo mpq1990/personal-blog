@@ -19,6 +19,8 @@
 //= require cocoon
 //= require gritter
 //= require cable
+//= required lib/typed
+//= required typedjs-impl
 //= require_tree .
 //= require popper
 //= require bootstrap-sprockets
